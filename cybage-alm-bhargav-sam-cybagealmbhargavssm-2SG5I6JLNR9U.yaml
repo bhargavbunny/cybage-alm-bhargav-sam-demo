@@ -20,3 +20,6 @@ Resources:
               Ref: SNSTopic1
   SNSTopic1:
     Type: 'AWS::SNS::Topic'
+    properties:
+      DisplayName: block/allow
+      TopicName: cybage-alm-bhargav-sns

@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
-      CodeUri: .
+      CodeUri: s3://cybage-alm-bhargav-ssm/cybage-alm-bhargav-sam-${BUILD_NUMBER}.zip
       Description: bhargav-alm-sam-demo
       MemorySize: 128
       Timeout: 3

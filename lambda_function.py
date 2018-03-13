@@ -11,8 +11,7 @@ def lambda_handler(event, context):
             InstanceIds=[
                 instanceId
             ],
-            DocumentName='cybage-alm-bhargav-allow-port',
-            OutputS3BucketName="bhargav-alm-ssm"
+            DocumentName='cybage-alm-bhargav-allow-port'
         )
     elif message == "no":
         print("Message From SNS: " + message)

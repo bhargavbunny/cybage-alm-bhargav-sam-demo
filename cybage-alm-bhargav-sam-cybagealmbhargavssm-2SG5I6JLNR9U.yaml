@@ -2,16 +2,22 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: bhargav-alm-sam-demo
 Parameters:
-  CodeUri:
-    Type: String
-    Description: The link to the code to use.
+    BucketName:
+        Type: String
+    CodeKey:
+        Type: String
+
 Resources:
-  cybagealmbhargavsamcybagealmbhargavssm2SG5I6JLNR9U:
+  cybage-alm-bhargav-lambda:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
-      CodeUri: !Ref CodeUri
+      CodeUri:
+                # !Ref function allows you to fetch value 
+                # of parameters and other resources at runtime
+         Bucket: !Ref BucketName
+         Key: !Ref CodeKey
       Description: bhargav-alm-sam-demo
       MemorySize: 128
       Timeout: 3

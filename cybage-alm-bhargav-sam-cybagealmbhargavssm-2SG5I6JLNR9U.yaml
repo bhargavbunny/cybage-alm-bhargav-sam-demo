@@ -23,7 +23,7 @@ Resources:
       Description: bhargav-alm-sam-demo
       MemorySize: 128
       Timeout: 3
-      AutoPublishAlias : !Ref MyLambdaFunction.Version
+      AutoPublishAlias : !Ref version
       Role: 'arn:aws:iam::543816070942:role/lambda_basic_execution'
       Events:
         SNS1:

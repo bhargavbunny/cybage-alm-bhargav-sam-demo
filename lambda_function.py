@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     ssmClient = boto3.client('ssm')
     instanceId = "i-0766f2fcbb251db11"
     message = event['Records'][0]['Sns']['Message']
-    if message == "yes":
+    if message == "open":
         print("Message From SNS: " + message)
         ssmCommand = ssmClient.send_command(
             InstanceIds=[
@@ -13,7 +13,7 @@ def lambda_handler(event, context):
             ],
             DocumentName='cybage-alm-bhargav-allow-port'
         )
-    elif message == "no":
+    elif message == "close":
         print("Message From SNS: " + message)
         ssmCommand = ssmClient.send_command(
             InstanceIds=[

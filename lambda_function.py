@@ -3,7 +3,7 @@ import time
 
 def lambda_handler(event, context):
     ssmClient = boto3.client('ssm')
-    instanceId = "i-0e4e5379df2db213f"
+    instanceId = "i-0766f2fcbb251db11"
     message = event['Records'][0]['Sns']['Message']
     if message == "yes":
         print("Message From SNS: " + message)

@@ -32,7 +32,7 @@ Resources:
             Topic:
               Ref: SNSTopic1
    Type : AWS::Lambda::Version,
-   Properties : {             
+   Properties :             
     FunctionName : !Ref cybagealmbhargavlambda
   SNSTopic1:
     Type: 'AWS::SNS::Topic'

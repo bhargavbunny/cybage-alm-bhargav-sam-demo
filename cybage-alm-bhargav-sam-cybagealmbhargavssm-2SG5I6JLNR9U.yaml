@@ -31,10 +31,6 @@ Resources:
           Properties:
             Topic:
               Ref: SNSTopic1
- Lambdaversion
-   Type : AWS::Lambda::Version,
-   Properties :             
-    FunctionName : !Ref cybagealmbhargavlambda
   SNSTopic1:
     Type: 'AWS::SNS::Topic'
     Properties:

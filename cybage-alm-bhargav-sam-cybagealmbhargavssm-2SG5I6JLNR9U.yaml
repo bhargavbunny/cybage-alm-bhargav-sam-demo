@@ -6,6 +6,8 @@ Parameters:
         Type: String
     CodeKey:
         Type: String
+    version:
+        Type: String
 
 Resources:
   cybagealmbhargavlambda:
@@ -21,6 +23,7 @@ Resources:
       Description: bhargav-alm-sam-demo
       MemorySize: 128
       Timeout: 3
+      Version : !Ref version
       Role: 'arn:aws:iam::543816070942:role/lambda_basic_execution'
       Events:
         SNS1:
